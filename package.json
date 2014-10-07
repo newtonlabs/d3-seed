@@ -1,0 +1,14 @@
+{
+  "name": "hutch-client",
+  "version": "0.0.0",
+  "dependencies": {},
+  "devDependencies": {
+    "karma": "~0.12.16",
+    "karma-chrome-launcher": "~0.1.4",
+    "karma-jasmine": "~0.1.5",
+    "http-server": "~0.7.1"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  }
+}
