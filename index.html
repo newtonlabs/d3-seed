@@ -7,13 +7,16 @@
   </body>
   <script src="vendor/d3.min.js"></script>
 
-  <!-- Created with
-  topojson -o usa.json -p state=NAME_1,county=NAME_2 -- counties=USA_adm2.shp states=USA_adm1.shp
-  -->
   <script src="vendor/topojson.v1.min.js"></script>
 
+  <!-- A base function for setting up the SVG and chart container -->
   <script src="scripts/base.js"></script>
+
+  <!-- The main visualization code -->
   <script src="scripts/viz.js"></script>
+
+  <!-- The script acts as a proxy to call the visualization and draw
+  it with sample data -->
   <script src="loaders/viz.js"></script>
 </html>
 

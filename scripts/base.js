@@ -45,5 +45,19 @@ this.d3.ext.base = function() {
     return height - margin.top - margin.bottom;
   };
 
+  // These common accessors are in every visualization
+  my.accessor('width', 900)
+    .accessor('height', 600)
+    .accessor('margin', {top: 10, right: 10, bottom: 10, left: 10});
+
+  // Shortcuts for common used methods
+  my.w = function() {
+    return my.chartWidth(my.width(), my.margin());
+  };
+
+  my.h = function() {
+    return my.chartHeight(my.height(), my.margin());
+  };
+
   return my;
 };

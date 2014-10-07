@@ -4,9 +4,7 @@ d3.charts.viz = function () {
   var my = d3.ext.base();
 
   // Define getter/setter style accessors.. defaults assigned
-  my.accessor('width', 900)
-    .accessor('height', 200)
-    .accessor('margin', {top: 10, right: 10, bottom: 10, left: 10});
+  my.accessor('example', true);
 
   // Data for Global Scope
   var chartData = [];
@@ -31,21 +29,12 @@ d3.charts.viz = function () {
     });
   };
 
-  my.w = function() {
-    return my.chartWidth(my.width(), my.margin());
-  };
-
-  my.h = function() {
-    return my.chartHeight(my.height(), my.margin());
-  };
-
   my.profitMax = function(data) {
     return d3.max(data, function(d) { return d.profit; });
   };
 
   // Standard initializor, gets called once on DOM selection
   my.initialize = function(data) {
-    // chartData = my.profit(data);
   };
 
   // main method for drawing the viz

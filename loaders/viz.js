@@ -1,5 +1,5 @@
 (function() {
-    var viz = d3.charts.viz();
+    var viz = d3.charts.viz().example(false);
     var categories = ['gold', 'white', 'black'];
 
     var rand = function() {
