@@ -20,20 +20,20 @@ this.d3.ext.base = function() {
     return my;
   };
 
-  my.setupSVG = function(el, width, height) {
+  my.setupSVG = function(el) {
     var svg = d3.select(el);
     svg.selectAll('svg').data([1]).enter()
         .append("svg")
-        .attr("width", width )
-        .attr("height", height );
+        .attr("width", my.width() )
+        .attr("height", my.height() );
     return svg.select('svg');
   };
 
-  my.setupChart = function(svg, margin) {
+  my.setupChart = function(svg) {
     svg.selectAll('.chart-box').data([1]).enter()
         .append("g")
         .attr('class', 'chart-box')
-        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+        .attr("transform", "translate(" + my.margin().left + "," + my.margin().top + ")");
     return svg.select('.chart-box');
   };
 

@@ -28,6 +28,11 @@ describe('Visualization: Stacked', function () {
     expect(categories).toEqual([ 'gold', 'white', 'black' ]);
   });
 
+  it ('calculates the profit max', function() {
+    var profits = viz.profit(data);
+    expect(viz.profitMax(profits)).toEqual(50);
+  });
+
   it ('calculates the height of the chart box', function() {
     expect(viz.h()).toBe(580);
     viz.height(700); // change the height
@@ -40,11 +45,6 @@ describe('Visualization: Stacked', function () {
     viz.height(700); // change the height
     viz.margin({top: 10, right: 10, bottom: 10, left: 20})
     expect(viz.w()).toBe(870);
-  });
-
-  it ('calculates the profit max', function() {
-    var profits = viz.profit(data);
-    expect(viz.profitMax(profits)).toEqual(50);
   });
 
 
