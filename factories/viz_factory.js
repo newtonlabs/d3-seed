@@ -1,13 +1,12 @@
 (function() {
-    var viz = d3.charts.viz().example(false);
-    var categories = ['gold', 'white', 'black'];
+    var viz = d3.charts.viz();
 
     var rand = function() {
       return Math.floor((Math.random() * 10) + 1)
     };
 
     var data = function() {
-      return categories.map(function(d,i) {
+      return [1,2,3].map(function(d,i) {
         var cost = rand();
         var sales = rand();
 
